@@ -23,7 +23,7 @@ const RecipeCard = () => {
                 {recipe.strMeal}
               </p>
               <button 
-              onClick={()=>navigate("/app/details", {state:{recipe}}) }
+              onClick={()=>navigate("/details", {state:{recipe}}) }
               className="mt-4 bg-orange-300 py-2 px-4 w-full rounded-xl">
                 Details
               </button>

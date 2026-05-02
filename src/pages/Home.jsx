@@ -17,7 +17,7 @@ const Home = () => {
       >
         <Header />
 
-        {food.length > 0 ? (
+        {food && food.length > 0 ? (
           <RecipeCard />
         ) : (
           <div className="flex justify-center items-center h-[calc(100vh-100px)]">

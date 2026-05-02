@@ -34,7 +34,7 @@ const RecipeProvider = ({ children }) => {
 
       const { data } = await axios.get(url);
 
-      setFood(data.meals);
+      setFood(data.meals || []);
       console.log(data);
     } catch (error) {
       setError(true);
