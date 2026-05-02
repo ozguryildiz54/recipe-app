@@ -47,7 +47,7 @@ const router = createBrowserRouter([
 
     ]
   }
-]);
+], { basename: "/recipe-app" });
 
 export default function AppRouter() {
   return <RouterProvider router={router} />;
