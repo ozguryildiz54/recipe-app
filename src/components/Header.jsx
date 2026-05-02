@@ -25,7 +25,7 @@ getData()
             className="flex flex-col sm:flex-row gap-3 items-center"
             onSubmit={(e)=>handleSubmit(e)}
           >
-            <input type="text" className="px-4 py-2 mx-3 rounded-md"
+            <input type="text" className="px-4 py-2 mx-3 rounded-md bg-white text-slate-800 placeholder-gray-400"
             onChange={(e)=>setQuery(e.target.value)}
             />
             <button className="px-4 py-2 bg-orange-400 rounded-md  hover:bg-indigo-700">
@@ -35,7 +35,7 @@ getData()
               name=""
               id=""
               value={mealType}
-              className="px-4 py-2 rounded-md border border-gray-300"
+              className="px-4 py-2 rounded-md border border-gray-300 bg-white text-slate-800"
               onChange={(e)=>{setMealType(e.target.value)}}
             >
               <option value="all">All</option>

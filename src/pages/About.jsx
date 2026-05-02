@@ -8,9 +8,9 @@ const About = () => {
   
   return (
       <div className={darkMode ? "dark" : ""}>
-    <div className='flex flex-col justify-center items-center px-6 py-3'>
+    <div className={`flex flex-col justify-center items-center px-6 py-3 min-h-screen ${darkMode ? "bg-gray-800 text-gray-100" : "bg-gray-100 text-slate-800"}`}>
       <img src={developer} alt="" className='w-[30rem] h-[30rem]  rounded-full border-4 border-slate-800'/>
-    <h1 className="text-4xl font-bold mb-4">I am a developer</h1>
+    <h1 className="text-4xl font-bold mb-4 dark:text-white">I am a developer</h1>
       <p className="max-w-xl text-center mb-8 text-lg leading-relaxed dark:text-gray-100">
         I love building modern web applications with React, Tailwind CSS, and
         other awesome tools. Passionate about clean code, performance, and user experience.
