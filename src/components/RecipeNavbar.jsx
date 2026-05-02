@@ -6,7 +6,7 @@ import RecipeProvider, { RecipeContext } from '../context/RecipeProvider'
 const navigation = [
   { name: 'Recipe', href: 'home', current: false },
   { name: 'About', href: 'about', current: false },
-  { name: 'Github', href: 'https://github.com/clarusway', current: false },
+  { name: 'Github', href: 'https://github.com/ozguryildiz54', current: false },
 
 ]
 

@@ -15,7 +15,7 @@ const RecipeProvider = ({ children }) => {
   const toggleDarkMode = () => setDarkMode((prev) => !prev);
 
   const [query, setQuery] = useState("");
-  const [mealType, setMealType] = useState("");
+  const [mealType, setMealType] = useState("all");
 
   const [error, setError] = useState(false);
   const [food, setFood] = useState([]);
@@ -28,8 +28,10 @@ const RecipeProvider = ({ children }) => {
     try {
       if (query) {
         url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
-      } else if (mealType) {
+      } else if (mealType && mealType !== "all") {
         url = `https://www.themealdb.com/api/json/v1/1/search.php?c=${mealType}`;
+      } else {
+        url = `https://www.themealdb.com/api/json/v1/1/search.php?f=a`;
       }
 
       const { data } = await axios.get(url);

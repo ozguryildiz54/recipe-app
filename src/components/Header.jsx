@@ -34,9 +34,11 @@ getData()
             <select
               name=""
               id=""
+              value={mealType}
               className="px-4 py-2 rounded-md border border-gray-300"
               onChange={(e)=>{setMealType(e.target.value)}}
             >
+              <option value="all">All</option>
               <option value="Seafood">SeaFood</option>
               <option value="chicken">Chicken</option>
               <option value="Beef">Beef</option>
