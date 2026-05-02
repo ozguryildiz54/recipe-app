@@ -42,20 +42,9 @@ const RecipeProvider = ({ children }) => {
     }
   };
 
-  // Auto-load default recipes on first mount so the home page is never empty
   useEffect(() => {
-    const loadDefault = async () => {
-      try {
-        const { data } = await axios.get(
-          "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
-        );
-        setFood(data.meals || []);
-      } catch (e) {
-        setError(true);
-      }
-    };
-    loadDefault();
-  }, []);
+    if (!query) getData();
+  }, [mealType]);
 
   if (loading) {
     return(
