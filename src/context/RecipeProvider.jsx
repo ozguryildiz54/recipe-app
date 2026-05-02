@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
 export const RecipeContext = createContext();
@@ -35,11 +35,25 @@ const RecipeProvider = ({ children }) => {
       const { data } = await axios.get(url);
 
       setFood(data.meals || []);
-      console.log(data);
     } catch (error) {
       setError(true);
     }
   };
+
+  // Auto-load default recipes on first mount so the home page is never empty
+  useEffect(() => {
+    const loadDefault = async () => {
+      try {
+        const { data } = await axios.get(
+          "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
+        );
+        setFood(data.meals || []);
+      } catch (e) {
+        setError(true);
+      }
+    };
+    loadDefault();
+  }, []);
 
   if (loading) {
     return(
