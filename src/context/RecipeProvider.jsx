@@ -43,8 +43,9 @@ const RecipeProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    if (!query) getData();
-  }, [mealType]);
+    const t = setTimeout(() => getData(), 350);
+    return () => clearTimeout(t);
+  }, [query, mealType]);
 
   if (loading) {
     return(
