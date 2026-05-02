@@ -29,14 +29,14 @@ const RecipeProvider = ({ children }) => {
       if (query) {
         url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
       } else if (mealType && mealType !== "all") {
-        url = `https://www.themealdb.com/api/json/v1/1/search.php?c=${mealType}`;
+        url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${mealType}`;
       } else {
         url = `https://www.themealdb.com/api/json/v1/1/search.php?f=a`;
       }
 
       const { data } = await axios.get(url);
 
-      setFood(data.meals || []);
+      setFood(Array.isArray(data?.meals) ? data.meals : []);
     } catch (error) {
       setError(true);
     }

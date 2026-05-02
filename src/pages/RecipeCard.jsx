@@ -12,7 +12,7 @@ const RecipeCard = () => {
   return (
     <div className={darkMode ? "dark" : ""}>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 min-h-screen p-5">
-        {food.map((recipe) => (
+        {(Array.isArray(food) ? food : []).map((recipe) => (
           <div
             key={recipe.idMeal}
             className="w-100 bg-white dark:bg-gray-800 shadow-xl rounded-2xl overflow-hidden  transition transform hover:scale-105 "
