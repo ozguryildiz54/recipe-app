@@ -26,7 +26,7 @@ const About = () => {
           GitHub
         </a>
         <a
-          href="https://linkedin.com/in/ozguryildiz54"
+          href="https://linkedin.com/in/ozguryildiz0"
           target="_blank"
           rel="noopener noreferrer"
           className="px-5 py-2 rounded-md bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 font-semibold hover:bg-blue-500 dark:hover:bg-blue-300 transition"
