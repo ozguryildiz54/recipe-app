@@ -1,6 +1,8 @@
 # Recipe App
 
-A React + Vite recipe discovery web app. Browse recipes, view detailed ingredients and instructions, and navigate through a clean responsive UI.
+🔗 **Live Demo:** https://ozguryildiz54.github.io/recipe-app/
+
+A React + Vite recipe discovery web app. Browse recipes, view detailed ingredients and instructions, and navigate through a clean responsive UI. Live debounced search, category filtering, dark mode, and gh-pages deployment.
 
 ## ✨ Features
 
