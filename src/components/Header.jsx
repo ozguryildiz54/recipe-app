@@ -16,7 +16,7 @@ getData()
   return (
     <div className={darkMode ? "dark" : ""}>
       <div
-       className={`transition-colors ${darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text--slate-800"}`}
+       className={`transition-colors ${darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-slate-800"}`}
       >
         <div className=" flex md:items-center py-5 md:justify-center">
           <h1 className="text-4xl font-bold">FOOD APP</h1>

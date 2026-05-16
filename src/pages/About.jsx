@@ -12,13 +12,13 @@ const About = () => {
       <img src={developer} alt="" className='w-[30rem] h-[30rem]  rounded-full border-4 border-slate-800'/>
     <h1 className="text-4xl font-bold mb-4 dark:text-white">I am a developer</h1>
       <p className="max-w-xl text-center mb-8 text-lg leading-relaxed dark:text-gray-100">
-        I love building modern web applications with React, Tailwind CSS, and
-        other awesome tools. Passionate about clean code, performance, and user experience.
+        I build web applications with React and Tailwind CSS. This recipe app is
+        one of my portfolio projects, focused on a clean and responsive UI.
       </p>
 
       <div className="flex space-x-6">
         <a
-          href="https://github.com/ozguryildiz54"
+          href="https://github.com/yldzozgur"
           target="_blank"
           rel="noopener noreferrer"
           className="px-5 py-2 rounded-md bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-900 font-semibold hover:bg-gray-700 dark:hover:bg-gray-300 transition"
@@ -26,7 +26,7 @@ const About = () => {
           GitHub
         </a>
         <a
-          href="https://linkedin.com/in/ozguryildiz0"
+          href="https://linkedin.com/in/yldzozgur"
           target="_blank"
           rel="noopener noreferrer"
           className="px-5 py-2 rounded-md bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 font-semibold hover:bg-blue-500 dark:hover:bg-blue-300 transition"

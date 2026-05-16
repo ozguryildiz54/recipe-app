@@ -7,8 +7,6 @@ const RecipeCard = () => {
 
   const navigate=useNavigate()
 
-  console.log(food);
-
   return (
     <div className={darkMode ? "dark" : ""}>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 min-h-screen p-5">

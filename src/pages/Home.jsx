@@ -7,7 +7,6 @@ import chief from "../assets/home.svg";
 const Home = () => {
   const { darkMode, food } = useContext(RecipeContext);
 
-  console.log("food", food);
   return (
     <div className={darkMode ? "dark" : ""}>
       <div

@@ -6,15 +6,13 @@ import diet  from "../assets/diet.svg"
 const Details = () => {
   const { state: {recipe} } = useLocation();
   const {darkMode}=useContext(RecipeContext)
- 
-  console.log(recipe)
 
   const ingredients=[]
 
   for (let i=1; i<=20; i++){
     const measure=recipe[`strMeasure${i}`]
     const ingredient=recipe[`strIngredient${i}`]
-    if (ingredient && ingredient.trim !== ""){
+    if (ingredient && ingredient.trim() !== ""){
       ingredients.push({measure,ingredient})
     }
 
@@ -34,8 +32,8 @@ const Details = () => {
            <section className="flex-1 bg-white dark:bg-gray-800 p-6 rounded-2xl space-y-3 shadow-lg ">
               <h2>Ingredients</h2>
               {
-                ingredients.map((ing)=>(
-                  <p>
+                ingredients.map((ing, i)=>(
+                  <p key={i}>
                     <span className="font-medium">{ing.measure} </span>
                     <span> {ing.ingredient}</span>
                   </p>
@@ -47,9 +45,9 @@ const Details = () => {
            </section>
            <section className="flex-1 bg-white dark:bg-gray-800 p-6 rounded-2xl space-y-3 shadow-lg ">
               <h2>Information</h2>
-              <p>id:{recipe.idMeal}</p>
-              <p>id:{recipe.strArea}</p>
-              <p>id:{recipe.strInstructions}</p>
+              <p>id: {recipe.idMeal}</p>
+              <p>Area: {recipe.strArea}</p>
+              <p>Instructions: {recipe.strInstructions}</p>
 
            </section>
         </div>
